@@ -67,7 +67,8 @@
         artLocation = document.evaluate('//img[@id=\"cloudcast-image\"]/@src',
           document, null, XPathResult.ANY_UNORDERED_NODE_TYPE, null).singleNodeValue.textContent;
       // //images-mix.netdna-ssl.com/w/300/h/300/q/85/upload/images/extaudio/9a5e19a7-6389-4a4b-b75c-0e41784dc962.jpg
-      artLocation = artLocation.substring(('//').length);
+      artLocation = 'http://' + artLocation.substring(('//').length);
+      
       title = document.evaluate('//h1[@id="cloudcast-name"]',
         document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent;
       album = null;
